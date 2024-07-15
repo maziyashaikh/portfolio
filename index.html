@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portfolio Website</title>
+</head>
+<body>
+
+
+     <!-- body lines -->
+    <div class="line__container">
+        <div class="separator"></div>
+        <div class="separator"></div>
+        <div class="separator"></div>
+    </div>
+<!-- body lines -->
+    <main>
+        <!-- landing page -->
+        <div class="scroll__container">
+            <section id="hero">
+                <div class="hero__container">
+                    <div class="hero__title">
+                        <span>Hello! I'm</span>
+                        <h1 class="hero__title__header text__reveal">Mazia</h1>
+                    </div>
+                    <div class="hero__cta">
+                        <h4>Web Developer</h4>
+                    </div>
+                </div>
+            </section>
+            <!-- landing page -->
+
+            <!-- about -->
+            <section id="about">
+                <div class="about__container">
+                    <div class="about__text">
+                        <p>I’m a web developer focused on creating responsive designs, working with PHP, and making interactive web elements. I excel at optimizing websites for different screen sizes and enhancing user experiences.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- about -->
+
+            <!-- video scale -->
+            <section id="video">
+                <div class="shim"></div>
+                <div class="video__sticky">
+                    <video class="main__video" autoplay muted loop playsinline src="assets/projectsvideo.mp4"></video>
+                    <div class="video__text__overlay">
+                        <h2 class="text__header__left">My</h2>
+                        <h2 class="text__header__right">Projects</h2>
+                    </div>
+                </div>
+            </section>
+            <!-- video scale -->
+
+            <!-- my projects -->
+            <section id="projects">
+                <div class="projects__sticky">
+                    <div class="slider__container">
+                        <div class="projects__slider"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- my blogs -->
+            <section id="blog">
+                <div class="blog__hero">
+                    <h2 class="text__reveal">Blogs</h2>
+                </div>
+            </section>
+
+            <section id="circle__section">
+                <div class="circle__sticky">
+                    <img src="assets/TechinfinityLogo.png" style="z-index: 1;">
+                    <div class="circle__container">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="discover">
+                <div class="discover__container">
+                    <p class="text__left">Websites promote you 24/7:</p>
+                    <p class="text__right"> No employee will do that.</p>
+                </div>
+            </section>
+            <div id="minicircle"></div>
+            <div id="second">
+                <div class="elem">
+                    <img src="https://www.cynthiaugwu.com/images/hovers/plug.png" alt="">
+                    <h1>Techinfinity</h1>
+                    <h5>2022</h5>
+                </div>
+                <div class="elem">
+                    <img src="https://www.cynthiaugwu.com/images/hovers/ixperience.png" alt="">
+                    <h1>IXPERIENCE</h1>
+                    <h5>2022</h5>
+                </div>
+                <div class="elem elemlast">
+                    <img src="https://www.cynthiaugwu.com/images/hovers/hudu.png" alt="">
+                    <h1>Techinfinity</h1>
+                    <h5>2021</h5>
+                </div>
+            </div>
+            <section id="footer">
+                <div class="footer__container">
+                    <div class="footer__title">
+                        
+                        <h2 class="text__reveal">Contact Now</h2>
+                    </div>
+                    <div class="face">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+           
+            <script>document.querySelector("body").addEventListener("mousemove", eyeball);
+
+                function eyeball() {
+                    'use strict';
+                    var eye = document.querySelectorAll(".eye");
+                    eye.forEach(function (eye) {
+                        let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 1)
+                        let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 1);
+                        let radian = Math.atan2(event.pageX - x, event.pageY - y);
+                        let rot = (radian * (180 / Math.PI) * 1) + 250;
+                        eye.style.transform  = "rotate("+ rot +"deg)"
+                    })
+                }</script>
+        </div>
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+    
+</body>
+</html>
